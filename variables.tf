@@ -65,8 +65,8 @@ variable "desired_task_count" {
 }
 variable "required_cpus" {
   type = number
-  description = "The required vcpu count for this service. 1000 is 1 CPU"
-  default = 125 # defaulted low for dev environments, override for production
+  description = "The required cpu resource for this service. 1024 here is 1 vCPU"
+  default = 128 # defaulted low for dev environments, override for production
 }
 variable "required_memory" {
   type = number
