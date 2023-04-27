@@ -61,17 +61,17 @@ variable "name_prefix" {
 variable "desired_task_count" {
   type = number
   description = "The desired ECS task count for this service"
-  default = 1
+  default = 1 # defaulted low for dev environments, override for production
 }
 variable "required_cpus" {
   type = number
-  description = "The required cpu count for this service"
-  default = 1
+  description = "The required vcpu count for this service. 1000 is 1 CPU"
+  default = 125 # defaulted low for dev environments, override for production
 }
 variable "required_memory" {
   type = number
   description = "The required memory for this service"
-  default = 512
+  default = 128 # defaulted low for dev environments, override for production
 }
 
 # ------------------------------------------------------------------------------
